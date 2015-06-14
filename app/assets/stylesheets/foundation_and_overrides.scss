@@ -76,18 +76,18 @@ $include-html-global-classes: $include-html-classes;
 // b. Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-grid-classes: $include-html-classes;
-// $include-xl-html-grid-classes: false;
+$include-html-grid-classes: $include-html-classes;
+$include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$row-width: rem-calc(1000);
+$total-columns: 12;
+$column-gutter: rem-calc(30);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+// $font-family-sans-serif: Roboto, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -95,33 +95,33 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -140,13 +140,13 @@ $include-html-global-classes: $include-html-classes;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
-// $global-rounded: 1000px;
+$global-radius: 3px;
+$global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
-// $shiny-edge-size: 0 1px 0;
-// $shiny-edge-color: rgba($white, .5);
-// $shiny-edge-active-color: rgba($black, .2);
+$shiny-edge-size: 0 1px 0;
+$shiny-edge-color: rgba($white, .5);
+$shiny-edge-active-color: rgba($black, .2);
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -220,12 +220,12 @@ $include-html-global-classes: $include-html-classes;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10);
@@ -434,20 +434,20 @@ $include-html-global-classes: $include-html-classes;
 
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
+//
 // $include-html-button-classes: $include-html-classes;
-
-// We use these to build padding for buttons.
+//
+// // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
 // $button-sml: rem-calc(14);
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
-
-// We use this to control the display property.
+//
+// // We use this to control the display property.
 // $button-display: inline-block;
 // $button-margin-bottom: rem-calc(20);
-
-// We use these to control button text styles.
+//
+// // We use these to control button text styles.
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
@@ -457,11 +457,11 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;
-
-// We use these to control various hover effects.
+//
+// // We use these to control various hover effects.
 // $button-function-factor: -20%;
-
-// We use these to control button border styles.
+//
+// // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
 // $button-bg-color: $primary-color;
@@ -477,12 +477,12 @@ $include-html-global-classes: $include-html-classes;
 // $warning-button-border-color: $warning-button-bg-hover;
 // $info-button-bg-hover: scale-color($info-color, $lightness: $button-function-factor);
 // $info-button-border-color: $info-button-bg-hover;
-
-// We use this to set the default radius used throughout the core.
+//
+// // We use this to set the default radius used throughout the core.
 // $button-radius: $global-radius;
 // $button-round: $global-rounded;
-
-// We use this to set default opacity and cursor for disabled buttons.
+//
+// // We use this to set default opacity and cursor for disabled buttons.
 // $button-disabled-opacity: .7;
 // $button-disabled-cursor: $cursor-default-value;
 
@@ -490,8 +490,8 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // $include-html-button-classes: $include-html-classes;
-
-// Sets the margin for the right side by default, and the left margin if right-to-left direction is used
+//
+// // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
 // $button-group-border-width: 1px;
 
@@ -630,13 +630,13 @@ $include-html-global-classes: $include-html-classes;
 
 // 11. Forms
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
+//
 // $include-html-form-classes: $include-html-classes;
-
-// We use this to set the base for lots of form spacing and positioning styles
+//
+// // We use this to set the base for lots of form spacing and positioning styles
 // $form-spacing: rem-calc(16);
-
-// We use these to style the labels in different ways
+//
+// // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: $font-weight-normal;
@@ -658,20 +658,20 @@ $include-html-global-classes: $include-html-classes;
 // $input-disabled-cursor: $cursor-default-value;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 // $input-include-glowing-effect: false;
-
-// We use these to style the fieldset border and spacing.
+//
+// // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: $gainsboro;
 // $fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
-
-// We use these to style the legends when you use them
+//
+// // We use these to style the legends when you use them
 // $legend-bg: $white;
 // $legend-font-weight: $font-weight-bold;
 // $legend-padding: rem-calc(0 3);
-
-// We use these to style the prefix and postfix input elements
+//
+// // We use these to style the prefix and postfix input elements
 // $input-prefix-bg: scale-color($white, $lightness: -5%);
 // $input-prefix-border-color: scale-color($white, $lightness: -20%);
 // $input-prefix-border-size: 1px;
@@ -679,11 +679,11 @@ $include-html-global-classes: $include-html-classes;
 // $input-prefix-overflow: hidden;
 // $input-prefix-font-color: $oil;
 // $input-prefix-font-color-alt: $white;
-
-// We use this setting to turn on/off HTML5 number spinners (the up/down arrows)
+//
+// // We use this setting to turn on/off HTML5 number spinners (the up/down arrows)
 // $input-number-spinners: true;
-
-// We use these to style the error states for inputs and labels
+//
+// // We use these to style the error states for inputs and labels
 // $input-error-message-padding: rem-calc(6 9 9);
 // $input-error-message-top: -1px;
 // $input-error-message-font-size: rem-calc(12);
@@ -692,19 +692,19 @@ $include-html-global-classes: $include-html-classes;
 // $input-error-message-font-color: $white;
 // $input-error-message-bg-color: $alert-color;
 // $input-error-message-font-color-alt: $oil;
-
-// We use this to style the glowing effect of inputs when focused
+//
+// // We use this to style the glowing effect of inputs when focused
 // $glowing-effect-fade-time: .45s;
 // $glowing-effect-color: $input-focus-border-color;
-
-// We use this to style the transition when inputs are focused and when the glowing effect is disabled.
+//
+// // We use this to style the transition when inputs are focused and when the glowing effect is disabled.
 // $input-transition-fade-time: 0.15s;
 // $input-transition-fade-timing-function: linear;
-
-// Select variables
+//
+// // Select variables
 // $select-bg-color: $ghost;
 // $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
-
+//
 
 // 12. Icon Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1400,82 +1400,77 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #92CDCF;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: rem-calc(45);
-// $topbar-margin-bottom: 0;
+$topbar-height: rem-calc(45);
+$topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(20);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
+$topbar-link-color: $white;
+$topbar-link-color-hover: $white;
+$topbar-link-color-active: $white;
+$topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
-// $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $jet;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-font-size: rem-calc(15);
+$topbar-link-hover-lightness: -10%; // Darken by 10%
+$topbar-link-bg: $topbar-bg;
+$topbar-link-bg-hover: $jet;
+$topbar-link-bg-color-hover: $charcoal;
+$topbar-link-bg-active: $primary-color;
+$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
-// $topbar-link-text-transform: none;
-// $topbar-link-padding: ($topbar-height / 3);
-// $topbar-back-link-size: rem-calc(18);
-// $topbar-link-dropdown-padding: rem-calc(20);
-// $topbar-button-font-size: .75rem;
-// $topbar-button-top: 7px;
+$topbar-link-text-transform: none;
+$topbar-link-padding: ($topbar-height / 3);
+$topbar-back-link-size: rem-calc(18);
+$topbar-link-dropdown-padding: rem-calc(20);
+$topbar-button-font-size: .75rem;
+$topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $jet;
+$topbar-dropdown-bg: $oil;
+$topbar-dropdown-link-color: $white;
+$topbar-dropdown-link-color-hover: $topbar-link-color-hover;
+$topbar-dropdown-link-bg: $oil;
+$topbar-dropdown-link-bg-hover: $jet;
 // $topbar-dropdown-link-weight: $font-weight-normal;
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: $white;
-// $topbar-dropdown-toggle-alpha: .4;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $white;
+$topbar-dropdown-toggle-alpha: .4;
 
-// $topbar-dropdown-label-color: $monsoon;
-// $topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-color: $monsoon;
+$topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
+$topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-bg: $oil;
 
 // Top menu icon styles
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
+$topbar-menu-link-transform: uppercase;
+$topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
-// $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
+$topbar-menu-link-color: $white;
+$topbar-menu-icon-color: $white;
+$topbar-menu-link-color-toggled: $jumbo;
+$topbar-menu-icon-color-toggled: $jumbo;
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
 
-// Transitions and breakpoint styles
-// $topbar-transition-speed: 300ms;
-// Using rem-calc for the below breakpoint causes issues with top bar
+$topbar-transition-speed: 300ms;
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
 
-// Top-bar input styles
-// $topbar-input-height: rem-calc(28);
+$topbar-input-height: rem-calc(28);
 
-// Divider Styles
-// $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
-// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+$topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
 
-// Sticky Class
-// $topbar-sticky-class: ".sticky";
-// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
-// $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
+$topbar-sticky-class: ".sticky";
+$topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+$topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
 
 // 36. Visibility Classes
 // - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -1,28 +1,15 @@
-== README
+Home Again is my self-directed project and final project for Module 3 at Turing School. Learning goals include:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Learning how to build a full Rails app from idea to delivery
+Revisiting previous concepts such as APIs and OAuth
+Finding the strengths and gaps in your knowledge of Ruby, Rails, and organizing a project.
+Implementing a production quality user interface
+Optimizing your application by optimizing your database, implementing caching, using background workers, and sending AJAX requests
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+See it live at: 'https://home-again.herokuapp.com/'
+
+Home Again is an application meant to reunite lost pets with their owners by providing access
+to aggregated social media posts mentioning a lost or found pet. Owners of lost pets can browse
+the "found pets" section to see if anyone has seen their pet and anyone who has seen or found a
+pet can browse the lost pets for information about the owner.

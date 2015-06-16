@@ -29,3 +29,7 @@ group :development, :test do
   gem 'vcr'
   gem 'simplecov'
 end
+
+group :test do
+  gem 'webmock'
+end

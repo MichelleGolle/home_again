@@ -15,3 +15,12 @@
 #     # end
 #
 # end
+
+
+
+###Search terms for tweets:
+#Lost dog
+#Lost cat
+#Lost kitten
+#Lost puppy
+#Found for the same words as above

@@ -8,7 +8,7 @@ RSpec.describe TwitterService, type: :model do
     @service = TwitterService.new
   end
 
-  xit 'returns a list of tweets' do
+  it 'returns a list of tweets' do
     VCR.use_cassette("get_tweets") do
       service = TwitterService.new
       tweets = service.tweets

@@ -21,10 +21,10 @@ class TwitterService
       # @url =  "#{tweet.id}, https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
   end
 
-  def found_pet_tweets(lat, lon)
+  def found_pet_tweets
     client.search("founddog denver OR foundcat denver OR foundpuppy denver OR foundkitten denver -RT", result_type: "recent").take(20)
       # "@#{tweet.user.screen_name}: #{tweet.text}"
-    
+
   end
 
 end

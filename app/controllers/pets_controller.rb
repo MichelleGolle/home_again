@@ -1,11 +1,9 @@
 class PetsController < ApplicationController
 
-def lost
+  def lost
+  end
 
-end
-
-def found
-  
-end
+  def found
+  end
 
 end

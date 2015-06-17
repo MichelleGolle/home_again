@@ -1,0 +1,14 @@
+<div class="tweets">
+  <ul class="small-block-grid-1">
+    <% @found_pet_tweets.each do |tweet| %>
+      <li class="lost-tweet">
+        Posted By @<%= tweet.user.screen_name %> on <%= tweet.created_at.strftime("%d %b. %Y") %>
+        <% tweet.media.each do |media| %>
+         <p class="pet-pic"><%= image_tag media.media_url%></p>
+        <% end %><br>
+        <%= tweet.text %>
+        <%= link_to "View on Twitter", "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,6 +1,6 @@
 class TwitterService
 
-  attr_reader :client
+  attr_reader :client, :url
 
     def initialize
       @client = Twitter::REST::Client.new do |config|
@@ -12,15 +12,19 @@ class TwitterService
     end
 
   def lost_pet_tweets
-    client.search("lostdog OR lostpuppy OR lostcat OR lostkitten OR lost dog OR lost cat OR lost puppy OR lost kitten OR missing dog OR missing cat OR missing puppy OR missing kitten", result_type: "recent").take(10).collect do |tweet|
-      "#{tweet.user.screen_name}: #{tweet.text}"
-    end
+    client.search("lostdog denver OR lostpuppy denver OR lostcat denver OR lostkitten denver OR missingdog denver OR missingcat denver OR missingpuppy denver OR missingkitten-RT", result_type: "recent").take(20)
+
+
+      # Tweets.create!(screen_name: tweet.user.screen_name, text: tweet.text, url: "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}")
+
+      # "@#{tweet.user.screen_name}: #{tweet.text} https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
+      # @url =  "#{tweet.id}, https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
   end
 
   def found_pet_tweets
-    client.search("founddog OR foundcat OR foundpuppy OR foundkitten OR found dog OR found cat OR found puppy OR found kitten", result_type: "recent").take(10).collect do |tweet|
-      "#{tweet.user.screen_name}: #{tweet.text}"
-    end
+    client.search("founddog denver OR foundcat denver OR foundpuppy denver OR foundkitten denver -RT", result_type: "recent").take(20)
+      # "@#{tweet.user.screen_name}: #{tweet.text}"
+
   end
 
 end

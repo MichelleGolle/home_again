@@ -1,19 +1,8 @@
-<div class="petsList">
-  <div class="row">
-   <div class="large-9 push-3 columns">
-     <%= image_tag("sample_map.jpg", class: "map") %>
-   </div>
-   <div class="tweets">
-     <div class="large-3 pull-9 columns">
-       <ul class="side-nav">
-         <li><%= image_tag("sample_tweet.png", class: "tweet image") %></li>
-         <li><%= image_tag("sample_tweet.png", class: "tweet image") %></li>
-         <li><%= image_tag("sample_tweet.png", class: "tweet image") %></li>
-         <li><%= image_tag("sample_tweet.png", class: "tweet image") %></li>
-         <li><%= image_tag("sample_tweet.png", class: "tweet image") %></li>
-         <li><%= image_tag("sample_tweet.png", class: "tweet image") %></li>
-       </ul>
-     </div>
-   </div>
-  </div>
+<div class="tweets">
+  <ul class="small-block-grid-3">
+    <% @lost_pet_tweets.each do |tweet| %>
+      <li><%= tweet %></li>
+      <li><%= tweet.url %></li>
+    <% end %>
+  </ul>
 </div>

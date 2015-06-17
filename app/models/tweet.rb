@@ -1,4 +1,4 @@
-class Tweets
+class Tweet < ActiveRecord::Base
 
   def self.service
     @service ||= TwitterService.new

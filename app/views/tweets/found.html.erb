@@ -1,10 +1,26 @@
+<form class="city-form">
+  <div class="row">
+    <div class="small-8">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right"></label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="Enter the name of the City you would like to search here.">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
 <div class="tweets">
   <ul class="small-block-grid-1">
     <% @found_pet_tweets.each do |tweet| %>
       <li class="lost-tweet">
-        Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %>
-
-        <%= tweet.text %>
+        Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %><br>
+        <p class="tweet-image"><%= image_tag tweet.image %></p><br>
+        <%= tweet.text %><br>
         <%= link_to "View on Twitter", tweet.url %>
       </li>
     <% end %>

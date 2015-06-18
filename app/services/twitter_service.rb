@@ -11,20 +11,12 @@ class TwitterService
       end
     end
 
-  def lost_pet_tweets
-    client.search("lostdog denver OR lostpuppy denver OR lostcat denver OR lostkitten denver OR missingdog denver OR missingcat denver OR missingpuppy denver OR missingkitten-RT", result_type: "recent").take(20)
-
-
-      # Tweets.create!(screen_name: tweet.user.screen_name, text: tweet.text, url: "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}")
-
-      # "@#{tweet.user.screen_name}: #{tweet.text} https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
-      # @url =  "#{tweet.id}, https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
+  def lost_pet_tweets(city)
+    client.search("lostdog #{city} OR lostpuppy #{city} OR lostcat #{city} OR lostkitten #{city} OR missingdog #{city} OR missingcat #{city} OR missingpuppy #{city} OR missingkitten #{city} -RT", result_type: "recent").take(20)
   end
 
   def found_pet_tweets
     client.search("founddog denver OR foundcat denver OR foundpuppy denver OR foundkitten denver -RT", result_type: "recent").take(20)
-      # "@#{tweet.user.screen_name}: #{tweet.text}"
-
   end
 
 end

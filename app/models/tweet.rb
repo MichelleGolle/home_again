@@ -34,4 +34,8 @@ class Tweet < ActiveRecord::Base
     tweets.select(&:persisted?)
   end
 
+  def self.clear_database
+    Tweet.destroy_all
+  end
+
 end

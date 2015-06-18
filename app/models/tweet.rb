@@ -13,7 +13,7 @@ class Tweet < ActiveRecord::Base
       t.screen_name = tweet.user.screen_name
       t.text = tweet.text
       t.url = "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
-      t.posted_at = tweet.created_at
+      t.posted_at = tweet.created_at.strftime("%b %d %Y")
       # if t.media != nil
       #   t.location = t.media.first.url
       # end

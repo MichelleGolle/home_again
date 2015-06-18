@@ -1,16 +1,26 @@
-<%= form_tag('/tweets/lost') do %>
-  <%= label_tag 'City' %>
-  <%= text_field_tag 'city' %>
-  <%= submit_tag "Submit" %>
-<% end %>
+<form class="city-form">
+  <div class="row">
+    <div class="small-8">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right">City:</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="City Name">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
 
 
 <div class="tweets">
   <ul class="small-block-grid-1">
     <% @lost_pet_tweets.each do |tweet| %>
       <li class="lost-tweet">
-        Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %>
-        <%= tweet.text %>
+        Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %><br>
+        <p class="tweet-image"><%= image_tag tweet.image %></p><br>
+        <%= tweet.text %><br>
         <%= link_to "View on Twitter", tweet.url %>
       </li>
     <% end %>

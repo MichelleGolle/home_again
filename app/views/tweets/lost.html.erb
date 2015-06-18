@@ -1,0 +1,19 @@
+<%= form_tag('/tweets/lost') do %>
+  <%= label_tag 'City' %>
+  <%= text_field_tag 'city' %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+
+<div class="tweets">
+  <ul class="small-block-grid-1">
+    <% @lost_pet_tweets.each do |tweet| %>
+      <li class="lost-tweet">
+        Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %>
+
+        <%= tweet.text %>
+        <%= link_to "View on Twitter", tweet.url %>
+      </li>
+    <% end %>
+  </ul>
+</div>

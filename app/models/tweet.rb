@@ -12,4 +12,8 @@ class Tweet < ActiveRecord::Base
     service.found_pet_tweets
   end
 
+  def self.clear_database
+    Tweet.destroy_all
+  end
+
 end

@@ -1,18 +1,14 @@
-<form class="city-form">
-  <div class="row">
-    <div class="small-8">
-      <div class="row">
-        <div class="small-3 columns">
-          <label for="right-label" class="right"></label>
-        </div>
-        <div class="small-9 columns">
-          <input type="text" id="right-label" placeholder="Enter the name of the City you would like to search here.">
-        </div>
+<div class="city-form">
+  <form>
+    <div class="row">
+      <div class="large-6 columns">
+        <%= form_tag('/tweets/lost', action: :lost, method: :get) do%>
+          <input type="text" placeholder="Enter the city or neighborhood you want to search here." <%= text_area_tag(:city) %>
+        <% end %>
       </div>
     </div>
-  </div>
-</form>
-
+  </form>
+</div>
 
 <div class="tweets">
   <ul class="small-block-grid-1">

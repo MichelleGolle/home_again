@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   def lost
-    @lost_pet_tweets = Tweet.lost_pet_tweets(params[:city])
+    @lost_pet_tweets = Tweet.lost_pet_tweets
 
   end
 

@@ -19,6 +19,7 @@ gem 'responders'
 gem 'sidekiq'
 gem 'sinatra'
 gem 'whenever'
+gem "skylight"
 gem "rails_12factor", group: :production
 
 group :development, :test do

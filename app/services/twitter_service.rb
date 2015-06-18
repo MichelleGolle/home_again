@@ -11,8 +11,8 @@ class TwitterService
       end
     end
 
-  def lost_pet_tweets(city)
-    client.search("lostdog #{city} OR lostpuppy #{city} OR lostcat #{city} OR lostkitten #{city} OR missingdog #{city} OR missingcat #{city} OR missingpuppy #{city} OR missingkitten #{city} -RT", result_type: "recent").take(20)
+  def lost_pet_tweets
+    client.search("lostdog denver OR lostpuppy denver OR lostcat denver OR lostkitten denver OR missingdog denver OR missingcat denver OR missingpuppy denver OR missingkitten denver -RT", result_type: "recent").take(20)
   end
 
   def found_pet_tweets

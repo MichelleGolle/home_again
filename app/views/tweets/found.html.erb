@@ -19,7 +19,6 @@
     <% @found_pet_tweets.each do |tweet| %>
       <li class="lost-tweet">
         Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %><br>
-        <p class="tweet-image"><%= image_tag tweet.image %></p><br>
         <%= tweet.text %><br>
         <%= link_to "View on Twitter", tweet.url %>
       </li>

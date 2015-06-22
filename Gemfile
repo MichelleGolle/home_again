@@ -19,6 +19,7 @@ gem 'responders'
 gem 'sidekiq'
 gem 'sinatra'
 gem 'whenever'
+gem 'rinku'
 gem "skylight"
 gem "rails_12factor", group: :production
 

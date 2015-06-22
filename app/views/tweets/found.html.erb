@@ -14,9 +14,17 @@
   <ul class="small-block-grid-1">
     <% @found_pet_tweets.each do |tweet| %>
       <li class="lost-tweet">
-        Posted By @<%= tweet.screen_name %> on <%= tweet.posted_at %><br>
-        <%= tweet.text %><br>
-        <%= link_to "View on Twitter", tweet.url %>
+        <div class="tweet">
+          <% if tweet.id % 2 == 0 %>
+            <div class="tweet-image"></div>
+            <!-- <%= image_tag tweet.image, class: "tweet-image" %> -->
+          <% end %>
+          <div class="tweet-container">
+            <span class="tweet-text"><%= Rinku.auto_link(tweet.text).html_safe  %></span>
+            <span class="tweet-byline">Posted By <a href="http://twitter.com/<%=tweet.screen_name%>">@<%= tweet.screen_name %></a> on <%= tweet.posted_at %></span>
+          </div>
+          <div class="clear">
+        </div>
       </li>
     <% end %>
   </ul>

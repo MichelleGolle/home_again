@@ -25,16 +25,12 @@
 }
 
 .tweets {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
   margin-bottom: 50px;
 }
 
 .lost-tweet {
-  text-align: center;
-  border-style: solid;
-  border-width: 5px;
-  margin: 10px 10px 10px 10px;
 }
 
 .pet-pic {
@@ -48,9 +44,32 @@
   margin-left: 450px;
   margin-top: 20px;
 }
-
+.clear {
+  clear: both;
+}
+.tweet {
+  padding: 10px;
+  background: #D2EDEF;
+  border-radius: 5px;
+  /*box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);*/
+}
 .tweet-image {
-  margin-left: 500px;
-  width: 150px;
-  height: 100px;
+  background: #000;
+  float: left;
+  margin-right: 10px;
+  max-width: 100px;
+  max-height: 100px;
+  display: inline-block;
+  height: 100px !important;
+  width: 100px !important;
+}
+.tweet-text {
+  display: block;
+}
+.tweet-byline {
+  color: #555;
+  font-size: 0.8em;
+  display: block;
+}
+.tweet-container {
 }

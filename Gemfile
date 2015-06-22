@@ -21,6 +21,7 @@ gem 'sinatra'
 gem 'whenever'
 gem 'rinku'
 gem "skylight"
+gem 'will_paginate'
 gem "rails_12factor", group: :production
 
 group :development, :test do
@@ -32,6 +33,7 @@ group :development, :test do
   gem 'launchy'
   gem 'vcr'
   gem 'simplecov'
+  gem 'shoulda-matchers'
 end
 
 group :test do

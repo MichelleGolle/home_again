@@ -1,6 +1,9 @@
 class Tweet < ActiveRecord::Base
 
-  has_many :media
+  validates :screen_name, presence: true
+  validates :text, presence: true
+  validates :url, presence: true
+  validates :posted_at, presence: true
 
   def self.service
     @service ||= TwitterService.new
@@ -14,9 +17,6 @@ class Tweet < ActiveRecord::Base
       t.text = tweet.text
       t.url = "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
       t.posted_at = tweet.created_at.strftime("%b %d %Y")
-      # if tweet.media
-      #   t.image = tweet.media.first.url
-      # end
       t.save
       t
     end
@@ -30,10 +30,7 @@ class Tweet < ActiveRecord::Base
       t.screen_name = tweet.user.screen_name
       t.text = tweet.text
       t.url = "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
-      #image not working, says media.first is nil
-      # if tweet.media != nil
-      #   t.image = tweet.media.first.url
-      # end
+      t.posted_at = tweet.created_at.strftime("%b %d %Y")
       t.save
       t
     end

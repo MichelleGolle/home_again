@@ -15,7 +15,7 @@ class TwitterService
     if (city != nil)
       spaceless = city.gsub(/\s+/, "")
     end
-    client.search("lostdog #{spaceless} OR lostpuppy #{spaceless} OR lostcat #{spaceless} OR lostkitten #{spaceless} OR missingdog #{spaceless} OR missingcat #{spaceless} OR missingpuppy #{spaceless} OR missingkitten #{spaceless} -RT", result_type: "recent").take(100)
+    client.search("lostdog #{spaceless} OR lostpuppy #{spaceless} OR lostcat #{spaceless} OR lostkitten #{spaceless} OR missingdog #{spaceless} OR missingcat #{spaceless} OR missingpuppy #{spaceless} OR missingkitten #{spaceless} -RT", result_type: "recent").take(1)
   end
 
   def found_pet_tweets(city)

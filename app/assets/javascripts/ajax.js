@@ -37,6 +37,7 @@ function fetchLostPets() {
         block.find('.tweet-time').text(tweet.posted_at)
         list.append(block)
       })
+      $(".spinner").fadeOut("slow")
     }
   })
 }

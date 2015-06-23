@@ -51,7 +51,7 @@
   padding: 10px;
   background: #D2EDEF;
   border-radius: 5px;
-  /*box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);*/
+  // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .tweet-image {
   background: #000;
@@ -76,4 +76,13 @@
 .pagination_centered {
   text-align: center;
   margin-bottom: 5px;
+}
+
+.lostandfound {
+  // background image?
+}
+
+#spinner {
+  text-align: center;
+  margin-top: 100px;
 }

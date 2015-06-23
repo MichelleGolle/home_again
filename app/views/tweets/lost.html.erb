@@ -1,19 +1,25 @@
-<div class="city-form">
-  <form>
-    <div class="row">
-      <div class="large-6 columns">
-        <%= form_tag('/tweets/lost', action: :lost, method: :get) do%>
-          <input type="text" placeholder="Enter the city or neighborhood you want to search here." <%= text_area_tag(:city) %>
-        <% end %>
+<div id="lostandfound">
+  <div class="city-form">
+    <form>
+      <div class="row">
+        <div class="large-6 columns">
+          <%= form_tag('/tweets/lost', action: :lost, method: :get) do%>
+            <input type="text" placeholder="Search by city or neighborhood and optional keywords" <%= text_area_tag(:city) %>
+          <% end %>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
+
+  <div class="tweets">
+    <ul class="small-block-grid-1" id="tweet-list">
+    </ul>
+  </div>
 </div>
 
-<div class="tweets">
-  <ul class="small-block-grid-1" id="tweet-list">
-  </ul>
-</div>
+
+<div class="row hidden spinner" id="spinner"><%= image_tag "dog.GIF" %><br></div>
+
 
 <%= javascript_tag do %>
   $(document).ready(function() {

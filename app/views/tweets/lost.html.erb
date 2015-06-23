@@ -11,26 +11,12 @@
 </div>
 
 <div class="tweets">
-  <ul class="small-block-grid-1">
-
-    <div class="pagination_centered">
-      <%= will_paginate @lost_pet_tweets %>
-    </div>
-
-    <% @lost_pet_tweets.each do |tweet| %>
-      <li class="lost-tweet">
-        <div class="tweet">
-          <!-- <% if tweet.id % 2 == 0 %>
-            <div class="tweet-image"></div>
-            <%= image_tag tweet.image, class: "tweet-image" %>
-          <% end %> -->
-          <div class="tweet-container">
-            <span class="tweet-text"><%= Rinku.auto_link(tweet.text).html_safe  %></span>
-            <span class="tweet-byline">Posted By <a href="http://twitter.com/<%=tweet.screen_name%>">@<%= tweet.screen_name %></a> on <%= tweet.posted_at %></span>
-          </div>
-          <div class="clear">
-        </div>
-      </li>
-    <% end %>
+  <ul class="small-block-grid-1" id="tweet-list">
   </ul>
 </div>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    fetchLostPets()
+  })
+<% end %>

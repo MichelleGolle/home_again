@@ -1,9 +1,11 @@
 class TweetsController < ApplicationController
 
   def lost
+    @city = params[:city]
   end
 
   def found
+    @city = params[:city]
   end
 
   def lost_ajax

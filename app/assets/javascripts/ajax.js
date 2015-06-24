@@ -13,7 +13,9 @@ jQuery.fn.autolink = function() {
 var template = '' +
   '<li class="lost-tweet">' +
     '<div class="tweet">' +
-      '<img class="tweet-image" />' +
+      '<div class="tweet-image-wrapper">' +
+        '<img class="tweet-image" />' +
+      '</div>' +
       '<div class="tweet-container">' +
         '<span class="tweet-text"></span>' +
         '<span class="tweet-byline">' +
@@ -24,28 +26,42 @@ var template = '' +
     '</div>' +
   '</li>'
 
-function fetchLostPets() {
+function fetchLostPets(city) {
+  city = arguments.length === 0 ? '' : city
+  var list = $('#tweet-list')
+  var spinner = $('.spinner')
+  list.empty()
+  spinner.fadeIn('slow')
   $.ajax({
     type: 'GET',
-    url: '/tweets/lost_ajax',
+    url: '/tweets/lost_ajax?city=' + city,
     success: function(tweets) {
-      var list = $('#tweet-list')
       tweets.forEach(function(tweet) {
         var block = $(template)
         block.find('.tweet-text').text(tweet.text).autolink()
         block.find('.tweet-user').attr('href', 'https://twitter.com/' + tweet.screen_name).text('@' + tweet.screen_name)
         block.find('.tweet-time').text(tweet.posted_at)
+        if (tweet.image === null) {
+          block.find('.tweet-image-wrapper').hide()
+        } else {
+          block.find('.tweet-image').attr('src', tweet.image)
+        }
         list.append(block)
       })
-      $(".spinner").fadeOut("slow")
+      spinner.fadeOut('slow')
     }
   })
 }
 
-function fetchFoundPets() {
+function fetchFoundPets(city) {
+  city = arguments.length === 0 ? '' : city
+  var list = $('#tweet-list')
+  var spinner = $('.spinner')
+  list.empty()
+  spinner.fadeIn('slow')
   $.ajax({
     type: 'GET',
-    url: '/tweets/found_ajax',
+    url: '/tweets/found_ajax?city=' + city,
     success: function(tweets) {
       var list = $('#tweet-list')
       tweets.forEach(function(tweet) {
@@ -55,6 +71,7 @@ function fetchFoundPets() {
         block.find('.tweet-time').text(tweet.posted_at)
         list.append(block)
       })
+      spinner.fadeOut('slow')
     }
   })
 }

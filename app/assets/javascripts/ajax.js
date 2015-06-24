@@ -69,6 +69,11 @@ function fetchFoundPets(city) {
         block.find('.tweet-text').text(tweet.text).autolink()
         block.find('.tweet-user').attr('href', 'https://twitter.com/' + tweet.screen_name).text('@' + tweet.screen_name)
         block.find('.tweet-time').text(tweet.posted_at)
+        if (tweet.image === null) {
+          block.find('.tweet-image-wrapper').hide()
+        } else {
+          block.find('.tweet-image').attr('src', tweet.image)
+        }
         list.append(block)
       })
       spinner.fadeOut('slow')

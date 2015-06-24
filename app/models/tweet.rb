@@ -17,6 +17,9 @@ class Tweet < ActiveRecord::Base
       t.text = tweet.text
       t.url = "https://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
       t.posted_at = tweet.created_at.strftime("%b %d %Y")
+      if tweet.media? and tweet.media.first.media_url?
+        t.image = tweet.media.first.media_url
+      end
       t.save
       t
     end

@@ -1,14 +1,12 @@
 <div id="lostandfound">
   <div class="city-form">
-    <form>
-      <div class="row">
-        <div class="large-6 columns">
-          <%= form_tag('/tweets/lost', action: :lost, method: :get) do%>
-            <input type="text" placeholder="Search by city or neighborhood and optional keywords" <%= text_area_tag(:city) %>
-          <% end %>
-        </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <form id="search">
+          <%= text_field_tag(:city, @city, placeholder: "Search by city of neighborhood and optional keywords") %>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
 
   <div class="tweets">
@@ -23,6 +21,23 @@
 
 <%= javascript_tag do %>
   $(document).ready(function() {
-    fetchLostPets()
+    var city = '<%= @city %>'
+    fetchLostPets(city)
+    var state = { 'city': city }
+    history.replaceState(state, '')
+
+    $(window).bind('popstate', function(event) {
+      var city = event.originalEvent.state.city
+      fetchLostPets(city)
+      $('#city').val(city)
+    })
+
+    $('#search').submit(function(event) {
+      var city = $('#city').val()
+      var state = { 'city': city }
+      history.pushState(state, '', '/tweets/lost/' + city)
+      fetchLostPets(city)
+      event.preventDefault()
+    })
   })
 <% end %>

@@ -56,12 +56,21 @@
 .tweet-image-wrapper {
   float: left;
   margin-right: 10px;
-  max-width: 100px;
-  max-height: 100px;
+  height: 100px;
+  width: 100px;
   display: inline-block;
   overflow: hidden;
+  position: relative;
 }
 .tweet-image {
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+  margin: auto;
+  min-height: 100%;
+  object-fit: cover;
 }
 .tweet-text {
   display: block;

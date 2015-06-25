@@ -36,18 +36,23 @@ function fetchLostPets(city) {
     type: 'GET',
     url: '/tweets/lost_ajax?city=' + city,
     success: function(tweets) {
-      tweets.forEach(function(tweet) {
-        var block = $(template)
-        block.find('.tweet-text').text(tweet.text).autolink()
-        block.find('.tweet-user').attr('href', 'https://twitter.com/' + tweet.screen_name).text('@' + tweet.screen_name)
-        block.find('.tweet-time').text(tweet.posted_at)
-        if (tweet.image === null) {
-          block.find('.tweet-image-wrapper').hide()
-        } else {
-          block.find('.tweet-image').attr('src', tweet.image)
-        }
-        list.append(block)
-      })
+      if (tweets.length === 0) {
+        $('#notweets').text('No results found, try searching surrounding cities for more results.');
+      }
+      else {
+        tweets.forEach(function(tweet) {
+          var block = $(template)
+          block.find('.tweet-text').text(tweet.text).autolink()
+          block.find('.tweet-user').attr('href', 'https://twitter.com/' + tweet.screen_name).text('@' + tweet.screen_name)
+          block.find('.tweet-time').text(tweet.posted_at)
+          if (tweet.image === null) {
+            block.find('.tweet-image-wrapper').hide()
+          } else {
+            block.find('.tweet-image').attr('src', tweet.image)
+          }
+          list.append(block)
+        })
+      }
       spinner.fadeOut('slow')
     }
   })
@@ -63,19 +68,23 @@ function fetchFoundPets(city) {
     type: 'GET',
     url: '/tweets/found_ajax?city=' + city,
     success: function(tweets) {
-      var list = $('#tweet-list')
-      tweets.forEach(function(tweet) {
-        var block = $(template)
-        block.find('.tweet-text').text(tweet.text).autolink()
-        block.find('.tweet-user').attr('href', 'https://twitter.com/' + tweet.screen_name).text('@' + tweet.screen_name)
-        block.find('.tweet-time').text(tweet.posted_at)
-        if (tweet.image === null) {
-          block.find('.tweet-image-wrapper').hide()
-        } else {
-          block.find('.tweet-image').attr('src', tweet.image)
-        }
-        list.append(block)
-      })
+      if (tweets.length === 0) {
+        $('#notweets').text('No results found, try searching surrounding cities for more results.');
+      } else {
+        var list = $('#tweet-list')
+        tweets.forEach(function(tweet) {
+          var block = $(template)
+          block.find('.tweet-text').text(tweet.text).autolink()
+          block.find('.tweet-user').attr('href', 'https://twitter.com/' + tweet.screen_name).text('@' + tweet.screen_name)
+          block.find('.tweet-time').text(tweet.posted_at)
+          if (tweet.image === null) {
+            block.find('.tweet-image-wrapper').hide()
+          } else {
+            block.find('.tweet-image').attr('src', tweet.image)
+          }
+          list.append(block)
+        })
+      }
       spinner.fadeOut('slow')
     }
   })

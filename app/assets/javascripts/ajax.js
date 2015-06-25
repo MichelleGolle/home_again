@@ -40,6 +40,7 @@ function fetchLostPets(city) {
         $('#notweets').text('No results found, try searching surrounding cities for more results.');
       }
       else {
+        $('#notweets').empty()
         tweets.forEach(function(tweet) {
           var block = $(template)
           block.find('.tweet-text').text(tweet.text).autolink()
@@ -71,6 +72,7 @@ function fetchFoundPets(city) {
       if (tweets.length === 0) {
         $('#notweets').text('No results found, try searching surrounding cities for more results.');
       } else {
+        $('#notweets').empty()
         var list = $('#tweet-list')
         tweets.forEach(function(tweet) {
           var block = $(template)
@@ -86,6 +88,8 @@ function fetchFoundPets(city) {
         })
       }
       spinner.fadeOut('slow')
+
+
     }
   })
 }
